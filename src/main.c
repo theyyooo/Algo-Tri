@@ -6,7 +6,11 @@
 #include "tri_insertion.h"
 #include "tri_par_tas.h"
 
-
+/**
+ * @brief 
+ * 
+ * @return int 
+ */
 int main()
 {
 
@@ -14,13 +18,11 @@ int main()
 
 	int taille = 20;
 
-	int sens = 1; //0 = decroissant et 1 = croissant
+	int sens = 0; //0 = decroissant et 1 = croissant
 
 	//tri_bulle(tab, taille, sens);
-    //tri_selection_croissant(tab, 10);
-    //tri_selection_decroissant(tab, 10);
-    //tri_insertion_croissant(tab, 10);
-    //tri_insertion_decroissant(tab, 10);  //A revoir
+    //tri_selection(tab, taille, sens);
+    //tri_insertion(tab, taille);
     
     //ECRITURE FICHIER.TXT
 
@@ -30,7 +32,7 @@ int main()
     
     for (int i = 0; i < taille; i++)
     {
-        fprintf(fichier, "Resultat assertion : %f \n", tab[i]);
+        fprintf(fichier, "Resultat assertion : %.01f \n", tab[i]);
     }
     
     fclose(fichier);
@@ -54,15 +56,15 @@ int main()
 
     //ECRITURE CSV FILE
 
-    FILE* fp = NULL;
-    FILE* fp = fopen ("excel.csv" , " w");
+    // FILE* fp = NULL;
+    // FILE* fp = fopen ("excel.csv" , " w");
 
-    for (int i = 0; i < taille; i++)
-    {
-        fprintf(fp, ", hello", tab[i]);
-    }
+    // for (int i = 0; i < taille; i++)
+    // {
+    //     fprintf(fp, ", hello", tab[i]);
+    // }
 
-    fclose(fp);
+    // fclose(fp);
 
 	return (0);
 }

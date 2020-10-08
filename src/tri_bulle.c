@@ -1,9 +1,11 @@
+
 /**
- * \file tri_bulle.c
- * tri un tableau par ordre croissant ou décroissant
- * date: 8/10/20
- * autor: theol
-*/
+ * @brief Algorythm de tri à bulle
+ * 
+ * @param tab tableau a trier
+ * @param taille taille du tableau a trier
+ * @param sens sens du tri (décroissant 0, croissant 1)
+ */
 void tri_bulle(float tab[], int taille, int sens)
 {
     for (int i=0 ; i < taille-1; i++)
