@@ -1,23 +1,49 @@
-void tri_bulle(float tab[], int taille)
+void tri_bulle(float tab[], int taille, int sens)
 {
-    for (int i = 0; i < taille; i++)
+    if (sens = 1)
     {
-        for (int j = taille-1; j >= i; j--)
+        for (int i = 0; i < taille; i++)
         {
-            if (tab[j+1] > tab[j])
+            for (int j = taille-1; j >= i; j--)
             {
-                float temp = tab[j+1];
-                tab[j+1] = tab[j];
-                tab[j] = temp;
+                if (tab[j+1] > tab[j])
+                {
+                    float temp = tab[j+1];
+                    tab[j+1] = tab[j];
+                    tab[j] = temp;
+                }
+                
             }
             
         }
         
+        for (int i = 0; i < taille; i++)
+        {
+            printf(" %.01f", tab[i]);
+        }
     }
-    
-    for (int i = 0; i < taille; i++)
+    else
     {
-        printf(" %.01f", tab[i]);
+        for (int i = taille; i > 0; i++)
+        {
+            for (int j = taille-1; j >= i; j--)
+            {
+                if (tab[j+1] > tab[j])
+                {
+                    float temp = tab[j+1];
+                    tab[j+1] = tab[j];
+                    tab[j] = temp;
+                }
+                
+            }
+            
+        }
+        
+        for (int i = 0; i < taille; i++)
+        {
+            printf(" %.01f", tab[i]);
+        }
     }
     
+   
 }

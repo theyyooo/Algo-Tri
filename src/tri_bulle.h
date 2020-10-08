@@ -1,1 +1,1 @@
-void tri_bulle(float *tab, int taille);
+void tri_bulle(float *tab, int taille, int sens);
