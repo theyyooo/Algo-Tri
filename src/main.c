@@ -56,15 +56,15 @@ int main()
 
     //ECRITURE CSV FILE
 
-    // FILE* fp = NULL;
-    // FILE* fp = fopen ("excel.csv" , " w");
+    FILE* fp = NULL;
+    FILE* fp = fopen ("excel.csv" , " w");
 
-    // for (int i = 0; i < taille; i++)
-    // {
-    //     fprintf(fp, ", hello", tab[i]);
-    // }
+    for (int i = 0; i < taille; i++)
+    {
+        fprintf(fp, ", hello", tab[i]);
+    }
 
-    // fclose(fp);
+    fclose(fp);
 
 	return (0);
 }
