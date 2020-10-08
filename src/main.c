@@ -1,21 +1,38 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "tri_bulle.h"
 #include "tri_selection.h"
 #include "tri_insertion.h"
 #include "tri_par_tas.h"
 
-void theo(){
-	float tab[10] = {10.5, 11.7, 54.1, 45.5, 85.2, 21.5, 34.1, 27.7, 4.9, 54.6};
-	int taille = 10;
-	tri_bulle(tab, taille);
-}
-
-void charles(){
-	double tab[10] = {10.5, 11.7, 54.1, 45.5, 85.2, 21.5, 34.1, 27.7, 4.9, 54.6};
-}
 
 int main()
 {
-	theo();
+
+	float tab[10] = {10.5, 11.7, 54.1, 45.5, 85.2, 21.5, 34.1, 27.7, 4.9, 54.6};
+
+	int taille = 10;
+
+	int sens = 0; //0 = descroissant et 1 = croissant
+
+	tri_bulle(tab, taille, sens);
+    //tri_selection_croissant(tab, 10);
+    //tri_selection_decroissant(tab, 10);
+    //tri_insertion_croissant(tab, 10);
+    //tri_insertion_decroissant(tab, 10); 
+    
+    //ECRITURE FICHIER.TXT
+    FILE* fichier = NULL;
+        
+    fichier = fopen("benchme_data.txt", "w");
+    
+    for (int i = 0; i < 10; i++)
+    {
+        fprintf(fichier, "Resultat assertion : %f \n", tab[i]);
+    }
+    
+    fclose(fichier);
+
 	return (0);
 }

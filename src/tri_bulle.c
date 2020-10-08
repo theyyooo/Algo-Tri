@@ -1,4 +1,4 @@
-void tri_bulle(float tab[], int taille)
+void tri_bulle(float tab[], int taille, int sens)
 {
     for (int i = 0; i < taille; i++)
     {
