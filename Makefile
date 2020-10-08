@@ -37,5 +37,11 @@ clean:
 run: all
 	./$(BIN)/$(EXECUTABLE)
 
+documentation:
+	-doxygen $(DOXGENCONF)
+	
 $(BIN)/$(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CFLAGS) $(CINCLUDES) $(CLIBS) $^ -o $@ $(LIBRARIES)
+
+
+

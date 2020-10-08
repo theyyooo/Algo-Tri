@@ -1,49 +1,34 @@
+/**
+ * \file tri_bulle.c
+ * tri un tableau par ordre croissant ou décroissant
+ * date: 8/10/20
+ * autor: theol
+*/
 void tri_bulle(float tab[], int taille, int sens)
 {
-    if (sens = 1)
+    for (int i=0 ; i < taille-1; i++)
+  {
+    for (int j=0 ; j < taille-i-1; j++)
     {
-        for (int i = 0; i < taille; i++)
+        if (sens == 1)
         {
-            for (int j = taille-1; j >= i; j--)
+            if (tab[j] > tab[j+1]) 
             {
-                if (tab[j+1] > tab[j])
-                {
-                    float temp = tab[j+1];
-                    tab[j+1] = tab[j];
-                    tab[j] = temp;
-                }
-                
+                float tmp = tab[j];
+                tab[j] = tab[j+1];
+                tab[j+1] = tmp;
             }
-            
-        }
-        
-        for (int i = 0; i < taille; i++)
+        } 
+        else
         {
-            printf(" %.01f", tab[i]);
-        }
-    }
-    else
-    {
-        for (int i = taille; i > 0; i++)
-        {
-            for (int j = taille-1; j >= i; j--)
+            if (tab[j] < tab[j+1]) 
             {
-                if (tab[j+1] > tab[j])
-                {
-                    float temp = tab[j+1];
-                    tab[j+1] = tab[j];
-                    tab[j] = temp;
-                }
-                
+                float tmp = tab[j];
+                tab[j] = tab[j+1];
+                tab[j+1] = tmp;
             }
-            
         }
-        
-        for (int i = 0; i < taille; i++)
-        {
-            printf(" %.01f", tab[i]);
-        }
-    }
-    
-   
+           
+    } 
+  }   
 }
