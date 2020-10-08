@@ -1,5 +1,23 @@
-double tri_bulle(double tab[])
+void tri_bulle(float tab[], int taille)
 {
-    int taille_tableau = sizeof(tab) / sizeof (*tab);
-    printf("taille: %d \n", taille_tableau);
+    for (int i = 0; i < taille; i++)
+    {
+        for (int j = taille-1; j >= i; j--)
+        {
+            if (tab[j+1] > tab[j])
+            {
+                float temp = tab[j+1];
+                tab[j+1] = tab[j];
+                tab[j] = temp;
+            }
+            
+        }
+        
+    }
+    
+    for (int i = 0; i < taille; i++)
+    {
+        printf(" %.01f", tab[i]);
+    }
+    
 }
