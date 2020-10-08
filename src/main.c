@@ -10,22 +10,12 @@
 int main()
 {
 
+	float tab[] = {10.5, 11.7, 54.1, 45.5, 85.2, 21.5, 34.1, 27.7, 4.9, 54.6};
 
-	  float tab[] = {10.5, 11.7, 54.1, 45.5, 85.2, 21.5, 34.1, 27.7, 4.9, 54.6};
-
-    //tri_selection_croissant(tab, 10);
+    // tri_selection_croissant(tab, 10);
     //tri_selection_decroissant(tab, 10);
     //tri_insertion_croissant(tab, 10);
-    //tri_insertion_decroissant(tab, 10);
-    
-    
-    //AfficheurTableau (VERIFICATION)
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%f \n", tab[i]);
-    }
-    
-    
+    //tri_insertion_decroissant(tab, 10); 
     
     //ECRITURE FICHIER.TXT
     FILE* fichier = NULL;
@@ -38,14 +28,6 @@ int main()
     }
     
     fclose(fichier);
-
-
-
-
-
-
-
-
 
 	return (0);
 }

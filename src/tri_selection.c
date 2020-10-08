@@ -1,6 +1,5 @@
-#include "tri_selection.h"
-
 //CROISSANT
+
 void tri_selection_croissant(float *valeur, int taille)
 {
     

@@ -1,5 +1,3 @@
-#include "tri_insertion.h"
-
 void tri_insertion_croissant(float *valeur, int taille)
 {
     int i, j, x;
