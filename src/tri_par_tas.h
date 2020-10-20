@@ -1,0 +1,1 @@
+void heapsort(float *tab, int size, int ascending);

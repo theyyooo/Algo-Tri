@@ -4,19 +4,19 @@
  * @param valeur tableau de float
  * @param taille taille du tableau en colonne
  */
-void tri_insertion(float *valeur, int taille)
+void tri_insertion(float *valeur, int taille, int sens)
 {
-    int i, j, x;
-    
-    for (i = 1; i < taille; i++)
-    {
-        x = valeur[i];
-        
-        for (j = i; j>0 && valeur[j-1]>x; j--)
-        {
-            valeur[j] = valeur[j - 1];
-        }
-        valeur[j]=x;
-    }
+ int j;
+   for (int i = 1; i < taille; i++)
+   {
+      float temp = valeur[i];
+      j = i - 1;
+      while ((temp < valeur[j]) ^ sens && j >= 0)
+      {
+            valeur[j + 1] = valeur[j];
+            j = j - 1;
+      }
+      valeur[j + 1] = temp;
+   }
     
 }

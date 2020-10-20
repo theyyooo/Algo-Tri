@@ -1,3 +1,3 @@
 
-void tri_insertion(float *valeur, int taille);
+void tri_insertion(float *valeur, int taille, int sens);
 

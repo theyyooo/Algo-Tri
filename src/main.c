@@ -6,6 +6,14 @@
 #include "tri_insertion.h"
 #include "tri_par_tas.h"
 
+// "%d" int
+
+// "%ld" long
+
+// "%f"float
+
+// "%f"double
+
 /**
  * @brief 
  * 
@@ -20,29 +28,29 @@ int main()
 
 	int sens = 0; //0 = decroissant et 1 = croissant
 
-	//tri_bulle(tab, taille, sens);
-    //tri_selection(tab, taille, sens);
-    //tri_insertion(tab, taille);
+	tri_bulle(tab, taille, sens);
+    // tri_selection(tab, taille, sens);
+     //tri_insertion(tab, taille);
     
-    //ECRITURE FICHIER.TXT
+    // ECRITURE FICHIER.TXT
 
-    FILE* fichier = NULL;
+    // FILE* fichier = NULL;
         
-    fichier = fopen("benchme_data.txt", "w");
+    // fichier = fopen("benchme_data.txt", "w");
     
-    for (int i = 0; i < taille; i++)
-    {
-        fprintf(fichier, "Resultat assertion : %.01f \n", tab[i]);
-    }
+    // for (int i = 0; i < taille; i++)
+    // {
+    //     fprintf(fichier, "Resultat assertion : %.01f \n", tab[i]);
+    // }
     
-    fclose(fichier);
+    // fclose(fichier);
 
     // TEMPS D'EXECUTION
 
-    float temps;
-    clock_t t1, t2;
+    // float temps;
+    // clock_t t1, t2;
  
-    t1 = clock();
+    // t1 = clock();
 
     //tri_bulle(tab, taille, sens);
     //tri_selection_croissant(tab, taille);
@@ -50,21 +58,21 @@ int main()
     //tri_insertion_croissant(tab, taille);
     //tri_insertion_decroissant(tab, taille); 
 
-    t2 = clock();
-    temps = (float)(t2-t1)/CLOCKS_PER_SEC;
-    printf("temps d'exécution = %f\n", temps);
+    // t2 = clock();
+    // temps = (float)(t2-t1)/CLOCKS_PER_SEC;
+    // printf("temps d'exécution = %f\n", temps);
 
     //ECRITURE CSV FILE
 
-    FILE* fp = NULL;
-    FILE* fp = fopen ("excel.csv" , " w");
+    // FILE* fp = NULL;
+    // FILE* fp = fopen ("excel.csv" , " w");
 
-    for (int i = 0; i < taille; i++)
-    {
-        fprintf(fp, ", hello", tab[i]);
-    }
+    // for (int i = 0; i < taille; i++)
+    // {
+    //     fprintf(fp, ", hello", tab[i]);
+    // }
 
-    fclose(fp);
+    // fclose(fp);
 
 	return (0);
 }

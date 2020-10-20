@@ -1,4 +1,6 @@
 
+#include "tri_bulle.h"
+
 /**
  * @brief Algorythm de tri à bulle
  * 
@@ -8,10 +10,8 @@
  */
 void tri_bulle(float tab[], int taille, int sens)
 {
-    for (int i=0 ; i < taille-1; i++)
-  {
-    for (int j=0 ; j < taille-i-1; j++)
-    {
+ for (int i=0 ; i < taille-1; i++){
+    for (int j=0 ; j < taille-i-1; j++){
         if (sens == 1)
         {
             if (tab[j] > tab[j+1]) 
@@ -32,5 +32,5 @@ void tri_bulle(float tab[], int taille, int sens)
         }
            
     } 
-  }   
+  }  
 }
